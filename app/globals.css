@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5c564;
-  --foreground: #000000;
-  --card-bg: #f5c564;
-  --card-border: #000000;
-  --accent-amber: #000000;
-  --accent-red: #ef4444;
+  --jet-black: #2d3142;
+  --tiger-flame: #ff521b;
+  --frosted-mint: #efffc8;
+  --medium-jungle: #09a129;
+  --dark-khaki: #3b341f;
+
+  --background: var(--frosted-mint);
+  --foreground: var(--jet-black);
+  --card-bg: var(--frosted-mint);
+  --card-border: var(--jet-black);
+  --accent-amber: var(--tiger-flame);
+  --accent-red: var(--tiger-flame);
 }
 
 @theme {
@@ -16,6 +22,18 @@
   --color-card-border: var(--card-border);
   --color-accent-amber: var(--accent-amber);
   --color-accent-red: var(--accent-red);
+  
+  /* Map default colors to the new theme */
+  --color-black: var(--jet-black);
+  --color-white: #ffffff;
+  
+  /* Add theme colors to Tailwind */
+  --color-jet-black: var(--jet-black);
+  --color-tiger-flame: var(--tiger-flame);
+  --color-frosted-mint: var(--frosted-mint);
+  --color-medium-jungle: var(--medium-jungle);
+  --color-dark-khaki: var(--dark-khaki);
+
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-condensed: var(--font-bebas-neue);
@@ -34,17 +52,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5c564;
+  background: var(--frosted-mint);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
-  border: 2px solid #f5c564;
+  background: var(--jet-black);
+  border: 2px solid var(--frosted-mint);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: var(--dark-khaki);
 }
 
 html {
@@ -80,15 +98,15 @@ body {
 
 /* Heavy Neo-Brutalist shadow effects */
 .brutal-shadow {
-  box-shadow: 4px 4px 0px 0px #000000;
+  box-shadow: 4px 4px 0px 0px var(--jet-black);
 }
 
 .brutal-shadow-lg {
-  box-shadow: 8px 8px 0px 0px #000000;
+  box-shadow: 8px 8px 0px 0px var(--jet-black);
 }
 
 .brutal-shadow-sm {
-  box-shadow: 2px 2px 0px 0px #000000;
+  box-shadow: 2px 2px 0px 0px var(--jet-black);
 }
 
 .brutal-btn-hover {
@@ -97,17 +115,17 @@ body {
 
 .brutal-btn-hover:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px #000000;
+  box-shadow: 6px 6px 0px 0px var(--jet-black);
 }
 
 .brutal-btn-hover:active {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px 0px #000000;
+  box-shadow: 2px 2px 0px 0px var(--jet-black);
 }
 
 /* Film negatives border effect adapted to black */
 .film-strip-border-dark {
-  background-image: radial-gradient(circle, #000000 4px, transparent 5px);
+  background-image: radial-gradient(circle, var(--jet-black) 4px, transparent 5px);
   background-size: 20px 20px;
   background-repeat: repeat-x;
 }

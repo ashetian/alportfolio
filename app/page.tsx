@@ -15,7 +15,7 @@ export default function Home() {
       {/* Global Fixed Mail Button */}
       <a
         href={`mailto:${portfolioData.contact.email}`}
-        className="fixed bottom-8 right-8 z-[999] w-14 h-14 rounded-full bg-black hover:bg-[#f5c564] text-[#f5c564] flex items-center justify-center transition-all shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:scale-105 group"
+        className="fixed bottom-8 right-8 z-[999] w-14 h-14 rounded-full bg-black hover:bg-[#efffc8] text-[#efffc8] flex items-center justify-center transition-all shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:scale-105 group"
         title="E-posta Gönder"
       >
         <img src="/logos/Email-Envelope-Close--Streamline-Pixel.svg" alt="Email" className="w-6 h-6 invert group-hover:invert-0 transition-all" />

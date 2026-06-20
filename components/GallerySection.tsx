@@ -14,17 +14,17 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
-      
+
       const { offsetTop, scrollHeight } = containerRef.current;
       const windowHeight = window.innerHeight;
-      
+
       const scrollY = window.scrollY;
       const scrollableDistance = scrollHeight - windowHeight;
       const scrolled = scrollY - offsetTop;
-      
+
       let progress = scrolled / scrollableDistance;
       progress = Math.max(0, Math.min(1, progress));
-      
+
       setScrollProgress(progress);
     };
 
@@ -37,7 +37,7 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("wheel", handleWheel, { passive: true });
     handleScroll();
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("wheel", handleWheel);
@@ -85,14 +85,14 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
           <div className="hidden md:flex gap-6 mr-10">
             <button
               onClick={() => scrollWindow("left")}
-              className="w-16 h-16 flex items-center justify-center bg-black hover:bg-white text-[#f5c564] hover:text-black border-2 border-black text-4xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
+              className="w-16 h-16 flex items-center justify-center bg-black hover:bg-white text-[#efffc8] hover:text-black border-2 border-black text-4xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
               aria-label="Previous image"
             >
               &larr;
             </button>
             <button
               onClick={() => scrollWindow("right")}
-              className="w-16 h-16 flex items-center justify-center bg-black hover:bg-white text-[#f5c564] hover:text-black border-2 border-black text-4xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
+              className="w-16 h-16 flex items-center justify-center bg-black hover:bg-white text-[#efffc8] hover:text-black border-2 border-black text-4xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
               aria-label="Next image"
             >
               &rarr;
@@ -114,11 +114,11 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
                 className="shrink-0 flex flex-col group relative"
               >
                 {/* Brutalist Image Wrapper: Height constrained to screen, Portrait Aspect Ratio, Thick Black Border */}
-                <div className="relative h-[55vh] md:h-[65vh] lg:h-[70vh] aspect-[3/4] bg-white overflow-hidden border-4 md:border-8 border-black transition-transform duration-300 group-hover:-translate-y-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[15px_15px_0px_0px_rgba(0,0,0,1)] cursor-crosshair">
+                <div className="relative h-[55vh] md:h-[65vh] lg:h-[70vh] aspect-[3/4] bg-white overflow-hidden border-4 md:border-8 border-black transition-transform duration-300 group-hover:-translate-y-2 shadow-[10px_10px_0px_0px_rgba(45,49,66,1)] group-hover:shadow-[15px_15px_0px_0px_rgba(45,49,66,1)] cursor-crosshair">
                   <img
                     src={item.image_url}
                     alt={item.caption || `Gallery image ${index + 1}`}
-                    className="w-full h-full object-cover filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100 transition-all duration-300 ease-out scale-100 group-hover:scale-105 pointer-events-none"
+                    className="w-full h-full object-cover filter grayscale-30 contrast-125 opacity-80 group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100 transition-all duration-300 ease-out scale-100 group-hover:scale-105 pointer-events-none"
                     loading="lazy"
                   />
 
@@ -144,13 +144,13 @@ export default function GallerySection({ gallery }: GallerySectionProps) {
         <div className="flex md:hidden justify-center gap-6 mt-4 relative z-10">
           <button
             onClick={() => scrollWindow("left")}
-            className="w-14 h-14 flex items-center justify-center bg-black active:bg-white text-[#f5c564] active:text-black border-2 border-black text-3xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
+            className="w-14 h-14 flex items-center justify-center bg-black active:bg-white text-[#efffc8] active:text-black border-2 border-black text-3xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
           >
             &larr;
           </button>
           <button
             onClick={() => scrollWindow("right")}
-            className="w-14 h-14 flex items-center justify-center bg-black active:bg-white text-[#f5c564] active:text-black border-2 border-black text-3xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
+            className="w-14 h-14 flex items-center justify-center bg-black active:bg-white text-[#efffc8] active:text-black border-2 border-black text-3xl font-black transition-colors brutal-shadow-sm brutal-btn-hover"
           >
             &rarr;
           </button>

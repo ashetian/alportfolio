@@ -55,7 +55,7 @@ const DEFAULT_ITEMS: MenuItem[] = [
         href: '#',
         ariaLabel: 'Blog',
         rotation: 8,
-        hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#ff521b', textColor: '#ffffff' }
     },
     {
         label: 'contact',
@@ -354,7 +354,14 @@ export default function BubbleMenu({
                                 <a
                                     role="menuitem"
                                     href={item.href}
-                                    onClick={() => {
+                                    onClick={(e) => {
+                                        if (item.href === '#contact') {
+                                            e.preventDefault();
+                                            window.scrollTo({
+                                                top: document.body.scrollHeight,
+                                                behavior: 'smooth'
+                                            });
+                                        }
                                         if (isMenuOpen) handleToggle();
                                     }}
                                     aria-label={item.ariaLabel || item.label}

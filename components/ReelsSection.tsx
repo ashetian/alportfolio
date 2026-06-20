@@ -118,7 +118,7 @@ export default function ReelsSection({ reels }: ReelsSectionProps) {
               
               {/* Title Overlay for context */}
               <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none">
-                <span className="font-mono text-[10px] text-[#f5c564] font-bold uppercase tracking-[0.2em] block mb-2">
+                <span className="font-mono text-[10px] text-[#efffc8] font-bold uppercase tracking-[0.2em] block mb-2">
                   0{idx + 1}
                 </span>
                 <h3 className="font-condensed text-2xl font-extrabold text-white uppercase tracking-tight leading-[1.1] drop-shadow-md">

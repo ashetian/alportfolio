@@ -36,7 +36,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 border-t-2 border-b-2 border-white/40 divide-y-2 md:divide-y-0 md:divide-x-2 divide-white/40 backdrop-blur-sm bg-black/10">
 
           <div className="p-8 md:p-12 flex flex-col justify-between min-h-[160px]">
-            <span className="font-mono text-xs font-bold text-[#f5c564] uppercase tracking-widest mb-8">
+            <span className="font-mono text-xs font-bold text-[#efffc8] uppercase tracking-widest mb-8">
               Yeni Bir Proje Mi?
             </span>
             <p className="text-white text-xl md:text-2xl font-bold uppercase leading-tight tracking-wide">
@@ -46,7 +46,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
 
           <a
             href={`mailto:${contact.email}`}
-            className="p-8 md:p-12 flex flex-col justify-between group hover:bg-[#f5c564] transition-colors min-h-[160px]"
+            className="p-8 md:p-12 flex flex-col justify-between group hover:bg-[#efffc8] transition-colors min-h-[160px]"
           >
             <span className="font-mono text-xs font-bold text-white/50 group-hover:text-black/60 uppercase tracking-widest mb-8 flex items-center gap-2">
               E-Posta Yaz
@@ -83,13 +83,13 @@ export default function ContactSection({ contact }: ContactSectionProps) {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-condensed text-3xl md:text-5xl font-bold text-white hover:text-[#f5c564] uppercase tracking-wider transition-colors leading-none flex items-center gap-3 group"
+                className="font-condensed text-3xl md:text-5xl font-bold text-white hover:text-[#efffc8] uppercase tracking-wider transition-colors leading-none flex items-center gap-3 group"
               >
                 {platform === "instagram" && (
-                  <img src="/logos/Logo-Social-Media-Old-Instagram--Streamline-Pixel.svg" alt="Instagram" className="w-8 h-8 md:w-12 md:h-12 invert group-hover:invert-[.20] group-hover:sepia group-hover:hue-rotate-[10deg] group-hover:saturate-[5] transition-all" />
+                  <img src="/logos/Logo-Social-Media-Old-Instagram--Streamline-Pixel.svg" alt="Instagram" className="w-8 h-8 md:w-12 md:h-12 invert transition-all" />
                 )}
                 {platform === "linkedin" && (
-                  <img src="/logos/Logo-Linkedin--Streamline-Pixel.svg" alt="LinkedIn" className="w-8 h-8 md:w-12 md:h-12 invert group-hover:invert-[.20] group-hover:sepia group-hover:hue-rotate-[10deg] group-hover:saturate-[5] transition-all" />
+                  <img src="/logos/Logo-Linkedin--Streamline-Pixel.svg" alt="LinkedIn" className="w-8 h-8 md:w-12 md:h-12 invert transition-all" />
                 )}
                 {platform}
               </a>

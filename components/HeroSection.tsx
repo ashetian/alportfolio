@@ -21,42 +21,42 @@ const items = [
     href: '#filmography',
     ariaLabel: 'Filmography',
     rotation: -8,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   },
   {
     label: 'REELS',
     href: '#reels',
     ariaLabel: 'Reels',
     rotation: 6,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   },
   {
     label: 'DENEYİM',
     href: '#experience',
     ariaLabel: 'Experience',
     rotation: -4,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   },
   {
     label: 'FOTOĞRAF',
     href: '#gallery',
     ariaLabel: 'Gallery',
     rotation: 4,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   },
   {
     label: 'RÖPORTAJ',
     href: '#interview',
     ariaLabel: 'Interview',
     rotation: -6,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   },
   {
     label: 'İLETİŞİM',
     href: '#contact',
     ariaLabel: 'Contact',
     rotation: 8,
-    hoverStyles: { bgColor: '#000000', textColor: '#f5c564' }
+    hoverStyles: { bgColor: '#2d3142', textColor: '#efffc8' }
   }
 ];
 
@@ -65,7 +65,7 @@ export default function HeroSection({ data, email }: HeroSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const leftPanelRef = useRef<HTMLDivElement>(null);
   const rightPanelRef = useRef<HTMLDivElement>(null);
-  const portraitImgRef = useRef<SVGSVGElement>(null);
+  const portraitImgRef = useRef<HTMLImageElement>(null);
 
   const [currentTime, setCurrentTime] = useState("");
   const [currentDate, setCurrentDate] = useState("");
@@ -141,13 +141,13 @@ export default function HeroSection({ data, email }: HeroSectionProps) {
     >
       {/* Absolute Top Navigation inside Hero */}
       <BubbleMenu
-        logo={<div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-[#f5c564] shadow-md">
+        logo={<div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-[#efffc8] shadow-md">
           <span className="font-condensed text-3xl tracking-tighter" style={{ fontWeight: 900 }}>ALP</span>
         </div>}
         items={items}
         menuAriaLabel="Toggle navigation"
-        menuBg="#000000"
-        menuContentColor="#f5c564"
+        menuBg="#2d3142"
+        menuContentColor="#efffc8"
         useFixedPosition={false}
         className="pt-4 md:pt-8"
         animationEase="back.out(1.5)"
@@ -158,7 +158,7 @@ export default function HeroSection({ data, email }: HeroSectionProps) {
       {/* LEFT PANEL: Solid Yellow Background, Asymmetrical Name, Bio & Footer */}
       <div
         ref={leftPanelRef}
-        className="bg-[#f5c564] px-8 pt-32 pb-8 md:px-12 md:pt-40 md:pb-12 flex flex-col justify-between items-start border-r-2 border-black h-full min-h-[500px] md:min-h-0"
+        className="bg-[#efffc8] px-8 pt-32 pb-8 md:px-12 md:pt-40 md:pb-12 flex flex-col justify-between items-start border-r-2 border-black h-full min-h-[500px] md:min-h-0"
       >
         {/* Center: Giant Typography & Bio */}
         <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 my-auto">

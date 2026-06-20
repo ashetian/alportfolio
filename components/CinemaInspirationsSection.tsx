@@ -84,7 +84,7 @@ export default function CinemaInspirationsSection({
               ref={(el) => {
                 containerRefs.current[idx] = el;
               }}
-              className="group relative p-8 md:p-12 bg-[#f4f4f4] hover:bg-black hover:text-[#f5c564] transition-colors duration-500 flex flex-col md:flex-row items-center gap-12 border-2 border-transparent hover:border-black brutal-shadow-sm hover:brutal-shadow-lg"
+              className="group relative p-8 md:p-12 bg-[#f4f4f4] hover:bg-black hover:text-[#efffc8] transition-colors duration-500 flex flex-col md:flex-row items-center gap-12 border-2 border-transparent hover:border-black brutal-shadow-sm hover:brutal-shadow-lg"
             >
               {/* Poster Image */}
               {movie.image_url && (
@@ -101,9 +101,9 @@ export default function CinemaInspirationsSection({
               <div className="flex-1 flex flex-col justify-between h-full">
                 <div>
                   {/* Director & Genre Header */}
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] text-black/40 group-hover:text-[#f5c564]/50 font-bold tracking-[0.2em] mb-6 uppercase transition-colors">
-                    <span className="text-black group-hover:text-[#f5c564] transition-colors">{movie.director}</span>
-                    <span className="w-4 h-[1px] bg-black/20 group-hover:bg-[#f5c564]/20 transition-colors" />
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] text-black/40 group-hover:text-[#efffc8]/50 font-bold tracking-[0.2em] mb-6 uppercase transition-colors">
+                    <span className="text-black group-hover:text-[#efffc8] transition-colors">{movie.director}</span>
+                    <span className="w-4 h-[1px] bg-black/20 group-hover:bg-[#efffc8]/20 transition-colors" />
                     <span>{movie.genre}</span>
                   </div>
 
