@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5c564;
+  --foreground: #000000;
+  --card-bg: #f5c564;
+  --card-border: #000000;
+  --accent-amber: #000000;
+  --accent-red: #ef4444;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-red: var(--accent-red);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-condensed: var(--font-bebas-neue);
+  --animate-marquee: marquee 30s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5c564;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 2px solid #f5c564;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Spinning Vinyl Animation */
+@keyframes spin-vinyl {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-vinyl {
+  animation: spin-vinyl 12s linear infinite;
+}
+
+/* Pause animation class */
+.animation-paused {
+  animation-play-state: paused;
+}
+
+/* Heavy Neo-Brutalist shadow effects */
+.brutal-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.brutal-btn-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.brutal-btn-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.brutal-btn-hover:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Film negatives border effect adapted to black */
+.film-strip-border-dark {
+  background-image: radial-gradient(circle, #000000 4px, transparent 5px);
+  background-size: 20px 20px;
+  background-repeat: repeat-x;
+}
