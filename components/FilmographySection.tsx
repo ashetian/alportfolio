@@ -56,13 +56,13 @@ export default function FilmographySection({ projects }: FilmographySectionProps
           { clipPath: "inset(100% 0 0 0)" },
           { clipPath: "inset(0% 0 0 0)", duration: 1.2, ease: "power4.inOut" }
         )
-        // Content fade in
-        .fromTo(
-          content,
-          { opacity: 0, x: -20 },
-          { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
-          "-=0.6"
-        );
+          // Content fade in
+          .fromTo(
+            content,
+            { opacity: 0, x: -20 },
+            { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
+            "-=0.6"
+          );
       });
     }, el);
 
@@ -90,9 +90,8 @@ export default function FilmographySection({ projects }: FilmographySectionProps
               ref={(el) => {
                 containerRefs.current[idx] = el;
               }}
-              className={`flex flex-col gap-8 md:gap-20 items-center group ${
-                idx % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-              }`}
+              className={`flex flex-col gap-8 md:gap-20 items-center group ${idx % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
             >
               {/* Project Image - 60% width */}
               <div className="project-img-container w-full md:w-3/5 aspect-[16/9] relative overflow-hidden bg-[#e0e0e0]">
@@ -114,11 +113,11 @@ export default function FilmographySection({ projects }: FilmographySectionProps
                   <span className="w-8 h-[1px] bg-black/20" />
                   <span>{project.category}</span>
                 </div>
-                
+
                 <h3 className="font-condensed text-5xl md:text-6xl font-extrabold text-black uppercase tracking-tight mb-6 leading-[0.9]">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-base text-zinc-600 mb-10 leading-relaxed font-medium">
                   {project.logline}
                 </p>
@@ -127,7 +126,7 @@ export default function FilmographySection({ projects }: FilmographySectionProps
                   <span className="font-mono text-[10px] text-black/50 font-bold tracking-[0.2em] uppercase">
                     {project.role.join(" · ")}
                   </span>
-                  
+
                   <a
                     href={project.video_link}
                     target="_blank"

@@ -45,16 +45,17 @@ export const portfolioData: PortfolioData = {
   ],
   experience: [
     {
-      role: "Işık Asistanı",
-      project_or_company: "Bir Zamanlar Bağımsız (Uzun Metraj)",
-      duration: "2023 - 2024"
+      role: "Ses-kurgucu",
+      project_or_company: "Mühendislikten Avrasya Pazarına",
+      duration: "2026"
     },
     {
-      role: "Kurgucu",
-      project_or_company: "Üniversite Sinema Kulübü",
-      duration: "2022 - Devam Ediyor"
+      role: "Muhabir-Kameraman",
+      project_or_company: "Trabzonanaliz",
+      duration: "2025-2026"
     }
   ],
+
   cinema_inspirations: [
     {
       title: "400 Blows",

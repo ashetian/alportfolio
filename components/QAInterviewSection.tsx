@@ -39,7 +39,7 @@ export default function QAInterviewSection({ qa, name }: QAInterviewSectionProps
       // QA Items Animation
       containerRefs.current.forEach((item) => {
         if (!item) return;
-        
+
         gsap.fromTo(
           item,
           { opacity: 0, x: 50 },
@@ -71,7 +71,7 @@ export default function QAInterviewSection({ qa, name }: QAInterviewSectionProps
               Düşünce Kareleri
             </span>
             <h2 className="font-condensed text-7xl md:text-8xl font-bold tracking-tighter text-black uppercase leading-[0.9]">
-              Kısa<br/>Cevaplar
+              Kısa<br />Cevaplar
             </h2>
           </div>
 

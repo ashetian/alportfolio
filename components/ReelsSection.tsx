@@ -115,7 +115,7 @@ export default function ReelsSection({ reels }: ReelsSectionProps) {
                 alt={reel.title}
                 className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
               />
-              
+
               {/* Title Overlay for context */}
               <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none">
                 <span className="font-mono text-[10px] text-[#efffc8] font-bold uppercase tracking-[0.2em] block mb-2">
@@ -127,7 +127,7 @@ export default function ReelsSection({ reels }: ReelsSectionProps) {
               </div>
             </a>
           ))}
-          
+
           {/* Spacer at the end for scroll padding */}
           <div className="shrink-0 w-[4vw]" />
         </div>
