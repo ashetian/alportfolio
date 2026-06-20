@@ -39,7 +39,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
             <span className="font-mono text-xs font-bold text-[#efffc8] uppercase tracking-widest mb-8">
               Yeni Bir Proje Mi?
             </span>
-            <p className="text-white text-xl md:text-2xl font-bold uppercase leading-tight tracking-wide">
+            <p className="text-white text-xl md:text-2xl font-bold uppercase leading-tight break-words tracking-wide">
               {contact.email}
             </p>
           </div>
